@@ -1,24 +1,18 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import './App.css';
-import { MOCK } from './Mock';
-import RecipeDetails from './RecipeDetails'
+import RecipesList from './Recipes/Components/RecipesList';
 
 class App extends Component {
-    state = {
-        recipe: MOCK
-    };
 
     render() {
-        return (MOCK.map(recipe => {
-            return (
-                <div className="app">
-                    <Container>
-                        <RecipeDetails recipe={ recipe }/>
-                    </Container>
-                </div>
-            )
-        }))
+        return (
+            <div className="app">
+                <Container>
+                    <RecipesList/>
+                </Container>
+            </div>
+        );
     }
 }
 
