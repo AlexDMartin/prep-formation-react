@@ -10,13 +10,15 @@ class App extends Component {
     };
 
     render() {
-        return (
-            <div className="app">
-                <Container>
-                    <RecipeDetails recipe={ MOCK[0] }/>
-                </Container>
-            </div>
-        )
+        return (MOCK.map(recipe => {
+            return (
+                <div className="app">
+                    <Container>
+                        <RecipeDetails recipe={ recipe }/>
+                    </Container>
+                </div>
+            )
+        }))
     }
 }
 
